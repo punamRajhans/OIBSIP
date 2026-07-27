@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="cloudBackground.mp4" type="video/mp4" />
+    </video>
+    <div class="container">
+      <h2>Temperature Converter</h2>
+
+      <label>Enter Temperature</label>
+      <input type="text" id="tempInput" placeholder="Enter value" />
+
+      <label>Select Unit</label>
+      <select id="unit">
+        <option value="C">Celsius</option>
+        <option value="F">Fahrenheit</option>
+        <option value="K">Kelvin</option>
+      </select>
+      <div class="buttons">
+        <button onclick="convertTemperature()">Convert</button>
+
+        <button onclick="resetForm()">Reset</button>
+      </div>
+      <p id="error"></p>
+
+      <div class="result" id="resultBox">
+        <h3>Converted Value</h3>
+        <p id="celsius"></p>
+        <p id="fahrenheit"></p>
+        <p id="kelvin"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
